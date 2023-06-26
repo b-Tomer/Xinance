@@ -4,7 +4,7 @@
             <li v-for="contact in contacts" :key="contact._id">
                 <ContactPreview :contact="contact"/>
                 <section class="actions">
-                    <SvgMoney />
+                    <!-- <SvgMoney /> -->
                     <RouterLink :to="`/contact/${contact._id}`">
                         <button title="Details"><i class="fa-regular fa-circle-question" style="color: #707a8a;"></i></button>
                     </RouterLink>
