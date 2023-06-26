@@ -1,6 +1,8 @@
 <template>
     <form @submit.prevent="save" v-if="contact" class="contact-edit">
+        <h4>Name</h4>
         <input v-model="contact.name" type="text">
+        <h4>Balance</h4>
         <input v-model.number="contact.balance" type="number">
         <button><i class="fa-solid fa-floppy-disk" ></i></button>
     </form>
