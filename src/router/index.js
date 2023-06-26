@@ -1,8 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../pages/HomeView.vue'
-import UserIndex from '../pages/UserIndex.vue'
-import UserDetails from '../pages/UserDetails.vue'
-import UserEdit from '../pages/UserEdit.vue'
+import ContactIndex from '../pages/ContactIndex.vue'
+import ContactDetails from '../pages/ContactDetails.vue'
+import ContactEdit from '../pages/ContactEdit.vue'
 import Chart from '../pages/Chart.vue'
 
 const routerOptions = {
@@ -14,9 +14,9 @@ const routerOptions = {
             component: HomeView,
         },
         {
-            path: '/user',
-            name: 'users',
-            component: UserIndex,
+            path: '/contact',
+            name: 'contacts',
+            component: ContactIndex,
         },
         {
             path: '/chart',
@@ -24,14 +24,14 @@ const routerOptions = {
             component: Chart,
         },
         {
-            path: '/user/:id',
+            path: '/contact/:id',
             name: 'details',
-            component: UserDetails,
+            component: ContactDetails,
         },
         {
-            path: '/user/edit/:id?',
+            path: '/contact/edit/:id?',
             name: 'edit',
-            component: UserEdit,
+            component: ContactEdit,
         },
         {
             path: '/about',

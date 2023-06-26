@@ -1,6 +1,6 @@
 <template>
     <Transition>
-        <section v-if="msg" class="user-msg" :class="msgClass">
+        <section v-if="msg" class="contact-msg" :class="msgClass">
             <p>{{ msg.txt }}</p>
         </section>
     </Transition>
@@ -30,7 +30,7 @@ export default {
         },
     },
     created() {
-        this.unListen = eventBus.on('user-msg', this.showMsg)
+        this.unListen = eventBus.on('contact-msg', this.showMsg)
     },
     unmounted() {
         this.unListen()
@@ -39,8 +39,13 @@ export default {
 </script>
 
 <style lang="scss">
-.user-msg {
-    transform-origin: right;
+.contact-msg {
+    transform-origin: left;
+    position:absolute;
+    top: 80vh;
+    left: 5px;
+    width: 200px;
+    height: fit-content;
 }
 .v-enter-active,
 .v-leave-active {

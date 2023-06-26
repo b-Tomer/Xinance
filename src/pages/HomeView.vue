@@ -3,7 +3,7 @@
 
 <template>
     <main class="home-page">
-        <RouterLink to="/user"><button class="btn">Quick start</button></RouterLink>     
+        <RouterLink to="/contact"><button class="btn">Quick start</button></RouterLink>     
     </main>
 </template>
 

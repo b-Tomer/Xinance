@@ -1,4 +1,4 @@
-.user-msg {
+.contact-msg {
     position: absolute;
     top: 10vh;
     right: 3em;
@@ -9,9 +9,10 @@
 }
 
 .success {
-    background-color: rgb(113, 161, 161);
+    background-color:$clrYellow;
+    color:$clr2;
 }
 
 .fail {
-    background-color: orangered;
+    background-color: rgba(161, 85, 58, 0.797);
 }

@@ -1,6 +1,6 @@
 <template>
-    <section class="user-filter">
-        <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+    <section class="contact-filter">
+       
         <input @input="onSetFilterBy" v-model="filterBy.txt" placeholder="search.." type="text">
     </section>
 </template>
