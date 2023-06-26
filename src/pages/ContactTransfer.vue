@@ -8,17 +8,20 @@
         <input v-model="transferAmount" type="number">
         <button style="font-size: 0.9rem;">Send</button>
     </form>
+    <ContactMsg />
 </template>
 
 <script>
 import { contactService } from '@/services/contactService'
 import { eventBus } from '@/services/eventBus.service.js'
+import ContactMsg from '@/cmps/ContactMsg.vue'
 
 export default {
     data() {
         return {
             contact: null,
             transferAmount: 0,
+
         }
     },
     methods: {
@@ -26,12 +29,14 @@ export default {
             const updatedBalance = this.contact.balance + parseInt(this.transferAmount)
             this.contact.balance = updatedBalance
             const msg = {
-              txt: `You just transfered ${this.transferAmount} to ${this.contact.name}`,
-              type: 'success'
+                txt: `You just transfered ${this.transferAmount} to ${this.contact.name}`,
+                type: 'success'
             }
             eventBus.emit('contact-msg', msg)
             await contactService.saveContact(this.contact)
-            this.$router.push('/contact')
+            setTimeout(() => {
+                this.$router.push('/contact')
+            }, 1500)
         },
         onChangeBalance() {
             const inputValue = this.$refs.transferRef.value
@@ -44,6 +49,9 @@ export default {
         if (contactId) {
             this.contact = await contactService.getContactById(contactId)
         }
+    },
+    components: {
+        ContactMsg,
     }
 }
 </script>
