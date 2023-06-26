@@ -47,7 +47,7 @@ export default {
               txt: `Welcome ${user.fullname}`,
               type: 'success'
             }
-            eventBus.emit('user-msg', msg)
+            eventBus.emit('contact-msg', msg)
           })
           .catch((err) => {
             console.log(err)
@@ -60,7 +60,7 @@ export default {
               txt: `Hi again ${user.fullname}`,
               type: 'success'
             }
-            eventBus.emit('user-msg', msg)
+            eventBus.emit('contact-msg', msg)
           })
           .catch((err) => {
             console.log(err)

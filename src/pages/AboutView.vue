@@ -1,7 +1,20 @@
 <template>
     <div class="about">
-        <h1>This is an about page</h1>
-    </div>
-</template>
+        <h1>About us</h1>
+        <p>
+            Founded in 2019, Xinance.com is designed to transform the way consumers discover the best deals when
+            sending money across the world. We believe transferring money between countries should be a painless experience
+            for everyone involved. We help our users navigate their way across the sea of global remittance providers by
+            offering detailed insight and guidance on all things money transfers.
+
+            There are so many different companies to consider, each with their own unique selling points. Our aim is to
+            remove the difficulty in finding and using suitable money transfer providers by guiding you through every single
+            step to ensure you make the best decision for your specific needs.
+
+            Our vision, mission, and values
+            The original idea for MoneyTransfers.com was born out of our founder’s inherent interest in sourcing the best
+            deals and packaging the particulars in a clear and concise manner, to help others save money and time.
+        </p>
+</div></template>
 
 <style></style>

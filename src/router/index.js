@@ -3,6 +3,7 @@ import HomeView from '../pages/HomeView.vue'
 import ContactIndex from '../pages/ContactIndex.vue'
 import ContactDetails from '../pages/ContactDetails.vue'
 import ContactEdit from '../pages/ContactEdit.vue'
+import ContactTransfer from '../pages/ContactTransfer.vue'
 import Chart from '../pages/Chart.vue'
 
 const routerOptions = {
@@ -32,6 +33,11 @@ const routerOptions = {
             path: '/contact/edit/:id?',
             name: 'edit',
             component: ContactEdit,
+        },
+        {
+            path: '/contact/transfer/:id',
+            name: 'transfer',
+            component: ContactTransfer,
         },
         {
             path: '/about',

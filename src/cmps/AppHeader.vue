@@ -41,18 +41,20 @@ export default {
         }
     },
     computed: {
+    },
+    methods:{
         onChangeLoginStatus(user) {
             if(user){
-                this.isLogedIn = false
+                this.isLogedIn = true
                 this.loggedInUser= user.fullname
+                console.log(user)
             }
+            
         },
         onSignOut(){
             userService.logout()
-            console.log('heyyy');
+            this.isLogedIn = false
         }
-    },
-    methods:{
     }
 
 }

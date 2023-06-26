@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 70px;
+    height: 80px;
     padding-inline: 1.2em;
     padding-inline-end: 2em;
     background-color:$clr1;
@@ -21,5 +21,20 @@
         font-size: 1.2rem;
        }
         
+    }
+    input {
+        border: none;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border-radius: 3px;
+        height: 35px;
+        width: 165px; 
+        margin-right: 5px;
+    }
+    a{
+        color:$clr5;
+        font-size: 0.7rem;
+    }
+    .login-form{
+        padding-top: 15px;
     }
 }

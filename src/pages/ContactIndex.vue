@@ -39,7 +39,6 @@ export default {
         },
         onSetFilterBy(filterBy) {
             this.filterBy = filterBy
-            console.log('filterBy: ', filterBy)
         }
     },
     computed: {
