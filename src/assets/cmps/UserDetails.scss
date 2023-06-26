@@ -1,0 +1,39 @@
+.user-details {
+    display: flex;
+    min-height: 400px;
+    margin-block: 1em;
+    padding: 20px;
+    background-color: $clr2;
+    color: $clr5;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+
+    a {
+        justify-self: end;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    button {
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+    }
+
+    .user-info {
+        display: flex;
+        gap: 7px;
+        align-items: center;
+    }
+
+    img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    h3{
+        padding-inline-start: 69px;
+    }
+}

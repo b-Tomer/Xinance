@@ -1,0 +1,17 @@
+.user-index {
+
+    .secondery-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline-end: 12px;
+    }
+
+    button {
+        border: none;
+        height: 26px;
+        border-radius: 3px;
+        cursor: pointer;
+        padding-inline: 10px;
+    }
+}

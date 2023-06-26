@@ -1,0 +1,18 @@
+//Set-up
+@import './set-up/_variables.scss';
+//Pages
+@import './pages/HomePage';
+
+//Cmps
+
+@import './cmps/UserIndex';
+@import './cmps/AppHeader';
+@import './cmps/AppFooter';
+@import './cmps/UserList';
+@import './cmps/UserPreview';
+@import './cmps/UserDetails';
+@import './cmps/UserEdit';
+@import './cmps/UserFilter';
+@import './cmps/UserMsg';
+@import './cmps/SideMenu';
+@import './cmps/Chart';

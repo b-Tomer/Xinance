@@ -1,0 +1,23 @@
+
+
+.side-menu{
+    grid-column: 1;
+    grid-row: 2;
+    border-right:1px solid $clr4;
+    
+    .menu-btn{
+        width: 100%;
+        border: none;
+        background-color: inherit;
+        height: 48px;
+        text-align: start;
+        padding-inline-start: 1rem;
+        &:hover{
+            background-color: $clr3;
+            cursor: pointer;
+        }
+    }
+}
+.active{
+    background: $clr3;
+}

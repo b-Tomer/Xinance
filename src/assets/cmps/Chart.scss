@@ -1,0 +1,8 @@
+.chart{
+    display: flex;
+    flex-direction: column;
+    canvas{
+        margin-top: 90px;
+        align-self: flex-end;
+    }
+}

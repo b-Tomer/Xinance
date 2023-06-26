@@ -1,0 +1,14 @@
+.user-filter {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 50%;
+    padding: 10px;
+    margin-block: 10px;
+    input{
+        border: none;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border-radius: 3px;
+        height: 35px;
+    }
+}
