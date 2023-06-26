@@ -1,7 +1,7 @@
 <template>
     <section class="chart">
 
-        <h1>Market Price (USD)</h1>
+        <h4>Market Price (USD)</h4>
         <Bar id="my-chart-id" :options="chartOptions" v-if="chartData.datasets" :data="chartData" />
     </section>
 </template>

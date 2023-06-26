@@ -1,9 +1,14 @@
 .chart{
     display: flex;
     flex-direction: column;
+    padding-top: 30px;
     canvas{
         margin-top: 90px;
         align-self: flex-start;
         max-width: 600px;
+        height: 800px;
+        @include for-narrow-layout {
+            max-width: 300px;
+        }
     }
 }

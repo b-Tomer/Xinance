@@ -1,5 +1,7 @@
 //Set-up
 @import './set-up/_variables.scss';
+@import './set-up/_mixins.scss';
+@import './set-up/_layout.scss';
 //Pages
 @import './pages/HomePage';
 

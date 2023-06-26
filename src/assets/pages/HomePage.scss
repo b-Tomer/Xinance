@@ -7,7 +7,7 @@
    background: url('https://img.freepik.com/free-vector/virtual-currency-background_1182-1933.jpg?w=740&t=st=1687438533~exp=1687439133~hmac=b94b27ee75016abf53dd5fb05cb1b1330f53dcb98c102ca1c2bb0b1a592ddcad');
 
     .btn{
-    background-color: #fcd435b0;
+    background-color: #fcd43599;
     color: $clr2;
     border: none;
     font-size: 1.1rem;
@@ -19,7 +19,7 @@
     &:hover{
         // background: #fede77;
         cursor: pointer;
-        color: $clr5;
+        color: rgba(168, 139, 59, 0.802);
     }
 }
 }

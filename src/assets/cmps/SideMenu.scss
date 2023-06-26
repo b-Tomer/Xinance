@@ -12,9 +12,29 @@
         height: 48px;
         text-align: start;
         padding-inline-start: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 5px;
         &:hover{
             background-color: $clr3;
             cursor: pointer;
+        }
+    }
+    .svg-home {
+        width: 12px;
+    }
+
+    .svg {
+        width: 16px;
+    }
+    @include for-narrow-layout {
+        .menu-btn{
+            flex-direction: row-reverse;
+            gap: 70px;
+            // width: 25px;
+            .menu-txt{
+                display: none;
+            }
         }
     }
   
