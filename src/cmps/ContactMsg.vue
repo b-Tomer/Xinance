@@ -18,7 +18,7 @@ export default {
     methods: {
         showMsg(msg) {
             this.msg = msg
-            setTimeout(() => (this.msg = null), msg.timeout || 1500)
+            setTimeout(() => (this.msg = null), msg.timeout || 2500)
         },
     },
     computed: {

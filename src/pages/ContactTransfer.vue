@@ -15,7 +15,8 @@
 import { contactService } from '@/services/contactService'
 import { eventBus } from '@/services/eventBus.service.js'
 import ContactMsg from '@/cmps/ContactMsg.vue'
-
+import store from '../store/index.js'
+import { mapMutations } from 'vuex'
 export default {
     data() {
         return {
@@ -25,8 +26,11 @@ export default {
         }
     },
     methods: {
+        ...mapMutations(['updateContactBalance']),
         async save() {
+            // const updatedBalance = this.contact.balance + parseInt(this.transferAmount)
             const updatedBalance = this.contact.balance + parseInt(this.transferAmount)
+            store.commit('updateContactBalance', { contactId: this.contact._id, balance: updatedBalance })
             this.contact.balance = updatedBalance
             const msg = {
                 txt: `You just transfered ${this.transferAmount} to ${this.contact.name}`,
@@ -36,13 +40,12 @@ export default {
             await contactService.saveContact(this.contact)
             setTimeout(() => {
                 this.$router.push('/contact')
-            }, 1500)
+            }, 2500)
         },
         onChangeBalance() {
             const inputValue = this.$refs.transferRef.value
             this.contactToSave = { ...this.contact, balance: this.contact.balance + inputValue }
-
-        }
+        },
     },
     async created() {
         const contactId = this.$route.params.id

@@ -1,7 +1,7 @@
 <template>
     <div class="about">
         <h1>About us</h1>
-        <p>
+        <p style="max-width: 580px;">
             Founded in 2019, Xinance.com is designed to transform the way consumers discover the best deals when
             sending money across the world. We believe transferring money between countries should be a painless experience
             for everyone involved. We help our users navigate their way across the sea of global remittance providers by

@@ -2,7 +2,7 @@
     <section class="contact-index">
         <div class="secondery-header">
             <ContactFilter @filter="onSetFilterBy" />
-            <RouterLink to="/contact/edit"><button>Add</button></RouterLink>
+            <RouterLink to="/contact/edit"><button>Add contact</button></RouterLink>
         </div>
         <ContactList @remove="deleteContact" v-if="contacts" :contacts="filteredContacts" />
         <ContactMsg />
@@ -10,31 +10,27 @@
 </template>
 
 <script>
-import { contactService } from '../services/contactService'
 import { eventBus } from '@/services/eventBus.service.js'
-import { toRaw } from 'vue';
 import ContactList from '@/cmps/contacts/ContactList.vue'
 import ContactFilter from '@/cmps/contacts/ContactFilter.vue'
 import ContactMsg from '@/cmps/ContactMsg.vue'
+import { toRaw } from 'vue'
 
 export default {
     data() {
         return {
-            contacts: null,
             filterBy: {},
         }
     },
     methods: {
         async deleteContact(contactId) {
-            const currContact = toRaw(this.contacts).filter(c => c._id === contactId);
+            const currContact = toRaw(this.contacts).filter(c => c._id === contactId)
             const msg = {
                 txt: `Contact ${currContact[0].name} removed...`,
                 type: 'success',
             }
-            await contactService.deleteContact(contactId)
 
-            const idx = this.contacts.findIndex(contact => contact._id === contactId)
-            this.contacts.splice(idx, 1)
+            this.$store.dispatch({ type: 'removeContact', contactId })
             eventBus.emit('contact-msg', msg)
         },
         onSetFilterBy(filterBy) {
@@ -45,10 +41,11 @@ export default {
         filteredContacts() {
             const regex = new RegExp(this.filterBy.txt, 'i')
             return this.contacts.filter(contact => regex.test(contact.name))
-        }
+        },
+        contacts() { return this.$store.getters.contacts }
     },
     async created() {
-        this.contacts = await contactService.getContacts()
+        await this.$store.dispatch({ type: 'loadContacts' })
     },
     components: {
         ContactList,

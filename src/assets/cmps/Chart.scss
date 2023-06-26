@@ -3,6 +3,7 @@
     flex-direction: column;
     canvas{
         margin-top: 90px;
-        align-self: flex-end;
+        align-self: flex-start;
+        max-width: 600px;
     }
 }
